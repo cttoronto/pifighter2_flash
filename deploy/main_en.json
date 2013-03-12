@@ -1,0 +1,91 @@
+{
+	"comport":"COM12",
+	"baudrate":57600,
+	"camera1":2,
+	"camera2":3,
+	"startDistance":80,
+	"motionRange":135,
+	"audio":{
+		"AUDIO_MUSIC_CHARACTER_SELECT":{
+			"id":"AUDIO_MUSIC_CHARACTER_SELECT",
+			"asset_path":"sounds/ninjagaiden_music_characterselect.mp3"	
+		},
+		"AUDIO_MUSIC_CREDITS":{
+			"id":"AUDIO_MUSIC_CREDITS",
+			"asset_path":"sounds/ninjagaiden_music_credits.mp3"	
+		},
+		"AUDIO_MUSIC_GAME":{
+			"id":"AUDIO_MUSIC_GAME",
+			"asset_path":"sounds/ninjagaiden_music_01.mp3"
+		},
+		"AUDIO_PIEHIT_1":{
+			"id":"AUDIO_PIEHIT_1",
+			"asset_path":"sounds/ninjagaiden_piehit01.mp3"
+		},
+		"AUDIO_PIEHIT_2":{
+			"id":"AUDIO_PIEHIT_2",
+			"asset_path":"sounds/ninjagaiden_piehit02.mp3"
+		},
+		"AUDIO_PIEHIT_3":{
+			"id":"AUDIO_PIEHIT_3",
+			"asset_path":"sounds/ninjagaiden_piehit03.mp3"
+		},
+		"AUDIO_PIETHROW_1":{
+			"id":"AUDIO_PIETHROW_1",
+			"asset_path":"sounds/ninjagaiden_piethrow01.mp3"
+		},
+		"AUDIO_PIETHROW_2":{
+			"id":"AUDIO_PIETHROW_2",
+			"asset_path":"sounds/ninjagaiden_piethrow02.mp3"
+		},
+		"AUDIO_PIETHROW_3":{
+			"id":"AUDIO_PIETHROW_3",
+			"asset_path":"sounds/ninjagaiden_piethrow03.mp3"
+		},
+		"AUDIO_CROWD":{
+			"id":"AUDIO_CROWD",
+			"asset_path":"sounds/punchout_crowd.mp3"
+		},
+		"AUDIO_CROWDEND":{
+			"id":"AUDIO_CROWDEND",
+			"asset_path":"sounds/punchout_crowdend.mp3"
+		},
+		"AUDIO_INTRO":{
+			"id":"AUDIO_INTRO",
+			"asset_path":"sounds/punchout_intro.mp3"
+		}
+	},
+	"characters":{
+		"character_00":{
+			"id":"character_00",
+			"name":"Archimedes the Giant",
+			"shortname":"Archimedes",
+			"frame":2
+		},
+		"character_01":{
+			"id":"character_01",
+			"name":"Liu \"Lei\" Hui",
+			"shortname":"Liu Hui",
+			"frame":5
+		},
+		"character_02":{
+			"id":"character_02",
+			"name":"Mazimillan Cohen",
+			"shortname":"Max",
+			"frame":1
+		},
+		"character_03":{
+			"id":"character_03",
+			"name":"Ryu Pieyabusa",
+			"shortname":"Ryu",
+			"frame":4
+		},
+		"character_04":{
+			"id":"character_04",
+			"name":"The Ultimate Isaac Newton",
+			"shortname":"Newton",
+			"frame":3
+		}
+	},
+"misc":0
+}

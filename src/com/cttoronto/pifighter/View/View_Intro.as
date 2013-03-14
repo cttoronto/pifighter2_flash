@@ -91,9 +91,7 @@
 		private function onArduinoData(e:Event):void {
 			// check to see if player 1/2 psl < 200 and player 1/2 range < 2m
 			if (acm.poorSignal1 < 200 && acm.poorSingal2 < 200) {
-				if (acm.range1 < 200 && acm.range2 < 200) {
-					onTimeout();
-				}
+				onTimeout();
 			}
 		}
 		

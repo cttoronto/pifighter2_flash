@@ -26,11 +26,17 @@ package com.cttoronto.pifighter.View
 		public var dispatcher:EventDispatcher = new EventDispatcher();
 		public var mc_playertext_01:MovieClip, mc_playertext_02:MovieClip;
 		
+		private var acm:ArduinoConnectModel;
+		
+		private var p1InRangeDuration:Number = 0;
+		private var p2InRangeDuration:Number = 0;
+		
 		private var timeout_id:uint;
 		public function View_Start()
 		{
 			super(Config.getInstance());
 		}
+		
 		override public function onAdded(e:Event):void{
 			this.visible = true;
 			gotoAndPlay(1);
@@ -41,10 +47,31 @@ package com.cttoronto.pifighter.View
 			mc_playertext_02.player_title.text = "PLAYER 2";
 			
 			timeout_id = setTimeout(onTimeout, 20000);
+			
+			acm = ArduinoConnectModel.getInstance();
+			acm.addEventListener(Event.CHANGE, onArduinoData);
 		}
+		
+		private function onArduinoData(e:Event):void {
+			if (acm.range1 < 200) {
+				p1InRangeDuration ++;
+				if (p1InRangeDuration > 40) player_ready(PLAYER1);
+			} else {
+				p1InRangeDuration = 0;
+			}
+			
+			if (acm.range2 < 200) {
+				p2InRangeDuration ++;
+				if (p2InRangeDuration > 40) player_ready(PLAYER2);
+			} else {
+				p2InRangeDuration = 0;
+			}
+		}
+		
 		private function onTimeout():void{
 			model.dispatchEvent(new Event(ApplicationEvent.START_INTRO));
 		}
+		
 		override public function onKey(e:KeyboardEvent):void{
 			switch (e.keyCode){
 				case Keyboard.NUMBER_1:
